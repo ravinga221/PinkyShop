@@ -1,70 +1,253 @@
-# Getting Started with Create React App
+# 🌸 Blush & Byte - Girls' Clothing E-Commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, elegant e-commerce single product page featuring a pink color palette with a clean, feminine-yet-tech layout. Built with React, TypeScript, Tailwind CSS v4, and React Router.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+### 🛍️ Product Catalog
 
-### `npm start`
+- **10 Different Products** across 5 categories:
+  - Lehengas (Traditional Indian wear)
+  - Frocks (Long and short styles)
+  - Skirts
+  - Blouses
+  - Sarees
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🎨 Product Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Image Gallery** with thumbnail navigation
+- **Color Selector** with visual color swatches
+- **Size Selector** (S, M, L, XL, XXL, XXXL)
+- **Quantity Controls** with +/- buttons
+- **Star Ratings** and review counts
+- **Product Details** accordion (Details, Shipping, Care)
 
-### `npm test`
+### 🛒 Shopping Cart System
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Add to Cart** with success feedback animation
+- **Cart Drawer** (slide-in from right) showing:
+  - Mini cart preview
+  - Item summaries with thumbnails
+  - Subtotal and total
+  - Quick checkout buttons
+- **Full Cart Page** (`/cart`) with:
+  - Complete item management
+  - Quantity adjustment per item
+  - Remove items
+  - Save for later functionality
+  - Promo code input
+  - Order summary with tax calculation
+  - Empty cart state
 
-### `npm run build`
+### ✅ Checkout Flow
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Order Confirmation Modal** with:
+  - Success animation
+  - Random order number generation
+  - Order summary
+  - Estimated delivery time
+  - Auto-redirect to home after confirmation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🎯 Navigation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Category Navigation Bar** with links to:
+  - All Products
+  - Lehengas
+  - Frocks
+  - Skirts
+  - Blouses
+  - Sarees
+- **Header** with:
+  - Brand logo ("blush & byte")
+  - Wishlist icon
+  - Shopping cart icon with badge count
 
-### `npm run eject`
+## 🎨 Design System
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Color Palette
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Primary Background**: `#FFF0F5` (Soft pink)
+- **Secondary Surfaces**: `#FFFAFC` (White with pink tint)
+- **Deep Pink Accent**: `#E83E8C`
+- **Medium Pink**: `#FF69B4`
+- **Pale Pink**: `#FFD9E6`
+- **Text Dark**: `#2D2D2D`
+- **Text Muted**: `#A65A7A`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Typography
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Headings**: Playfair Display (serif, elegant)
+- **Body Text**: Inter (sans-serif, clean)
 
-## Learn More
+### Layout
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Product View**: 60% image gallery / 40% product details
+- **Responsive Design**: Mobile-friendly breakpoints
+- **Grid Layouts**: Product thumbnails in responsive grids
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Getting Started
 
-### Code Splitting
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Node.js 16+ and npm/pnpm installed
 
-### Analyzing the Bundle Size
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Install Dependencies**
 
-### Making a Progressive Web App
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Run Development Server**
 
-### Advanced Configuration
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. **Build for Production**
+   ```bash
+   npm run build
+   # or
+   pnpm build
+   ```
 
-### Deployment
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+blush-and-byte-ecommerce/
+├── src/
+│   ├── app/
+│   │   ├── App.tsx                      # Main app with CartProvider
+│   │   ├── Layout.tsx                   # Layout wrapper
+│   │   ├── routes.tsx                   # React Router configuration
+│   │   ├── context/
+│   │   │   └── CartContext.tsx          # Cart state management
+│   │   ├── data/
+│   │   │   └── products.ts              # Product data (10 products)
+│   │   ├── pages/
+│   │   │   ├── HomePage.tsx             # All products page
+│   │   │   ├── CartPage.tsx             # Full cart page
+│   │   │   ├── LehengaPage.tsx          # Lehenga category
+│   │   │   ├── FrockPage.tsx            # Frock category
+│   │   │   ├── SkirtPage.tsx            # Skirt category
+│   │   │   ├── BlousePage.tsx           # Blouse category
+│   │   │   └── SareePage.tsx            # Saree category
+│   │   └── components/
+│   │       ├── Header.tsx               # Site header with cart
+│   │       ├── CategoryNav.tsx          # Category navigation
+│   │       ├── ProductView.tsx          # Main product display
+│   │       ├── ProductThumbnail.tsx     # Product thumbnails
+│   │       ├── AddToCartButton.tsx      # Add to cart with animation
+│   │       ├── CartDrawer.tsx           # Slide-in cart drawer
+│   │       ├── OrderConfirmation.tsx    # Order success modal
+│   │       ├── ColorSelector.tsx        # Color picker
+│   │       ├── SizeSelector.tsx         # Size selector
+│   │       ├── QuantitySelector.tsx     # Quantity controls
+│   │       ├── Rating.tsx               # Star rating display
+│   │       └── ProductDetails.tsx       # Accordion details
+│   └── styles/
+│       ├── index.css                    # Main styles
+│       ├── tailwind.css                 # Tailwind imports
+│       ├── theme.css                    # Theme variables
+│       └── fonts.css                    # Font imports
+├── package.json
+├── vite.config.ts
+└── README.md
+```
 
-### `npm run build` fails to minify
+## 🔧 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React 18.3.1** - UI framework
+- **TypeScript** - Type safety
+- **Tailwind CSS v4** - Styling
+- **React Router 7** - Navigation
+- **Vite** - Build tool
+- **Lucide React** - Icons
+
+## 📦 Key Dependencies
+
+```json
+{
+  "react": "18.3.1",
+  "react-router": "7.13.0",
+  "lucide-react": "0.487.0",
+  "tailwindcss": "4.1.12",
+  "@tailwindcss/vite": "4.1.12"
+}
+```
+
+## 🎯 Routes
+
+- `/` - Home page (All Products)
+- `/lehenga` - Lehenga category
+- `/frocks` - Frocks category
+- `/skirts` - Skirts category
+- `/blouses` - Blouses category
+- `/sarees` - Sarees category
+- `/cart` - Shopping cart page
+
+## 🛠️ Features in Detail
+
+### Cart Context
+
+Global state management for:
+
+- Cart items with product, color, size, and quantity
+- Saved for later items
+- Add to cart, remove, update quantity
+- Clear cart
+- Cart drawer visibility
+
+### Product Data Structure
+
+```typescript
+{
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
+  rating: number;
+  reviews: number;
+  colors: Array<{ name: string; hex: string }>;
+  sizes: string[]; // S, M, L, XL, XXL, XXXL
+}
+```
+
+### Responsive Design
+
+- Mobile: Single column layout
+- Tablet: 2-column product grid
+- Desktop: 60/40 split for product view, 3-column grid for catalog
+
+## 🎨 Customization
+
+### Adding New Products
+
+Edit `/src/app/data/products.ts` and add new product objects.
+
+### Changing Colors
+
+Update the color values in:
+
+- `/src/styles/theme.css` - For CSS custom properties
+- Component inline styles - For dynamic colors
+
+### Adding Categories
+
+1. Create new page in `/src/app/pages/`
+2. Add route in `/src/app/routes.tsx`
+3. Add navigation link in `/src/app/components/CategoryNav.tsx`
+
+## 📄 License
+
+This project is created for educational purposes.
+
+## 🌟 Acknowledgments
+
+Built with Figma Make - A modern web application builder powered by React and Tailwind CSS.
